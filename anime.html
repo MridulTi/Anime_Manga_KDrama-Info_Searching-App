@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="static/anime.css">
+	<link rel="stylesheet" type="text/css" href="static/anime.css">
+	<title>Anime/Manga Search Engine</title>
+</head>
+<body>
+	<button id="toggle" class="toggle">Dark-Mode</button>
+
+	<h1 align="center">Anime/Manga Search Engine</h1>
+
+	<div class="main" id="main">
+	
+		<input type="text" name="search_bar" placeholder="Enter Name w/o Spaces">
+		<button id="ent" class="ent">Search</button>
+	</div>
+	<div id="below">
+		<select id="selection" class="selection">
+			<option value="1">Anime</option>
+			<option value="2">Manga</option>
+			<option value="4">Character</option>
+			<option value="3">Kdrama</option>
+			<option value="5">Search with Keyword</option>
+			<!-- <option value="6">Check Tweets</option> -->
+		</select>
+		<button id="enter" class="enter"> Get Anime Quote</button>
+	</div>
+	<div id="addInfo" class="addInfo">	
+	
+	</div>
+	<br>
+	<div id="info" class="info">
+		<div id="choose"></div>
+		<!-- <div id =collapse> </div> -->
+
+		<div id="tweet"></div>
+		<h2 align="center"></h2>
+		<img width="250px" class="center" src="">
+		<img src="" id="wiki">
+		<span class="list"><ul></ul></span>
+		<h3></h3>
+		<h4></h4>
+		<h4 id="type"></h4>
+	</div>
+<script type="text/javascript" src="static/anime.js"></script>
+
+</body>
+<!-- <script type="module" src="server.js"></script> -->
+
+</html>

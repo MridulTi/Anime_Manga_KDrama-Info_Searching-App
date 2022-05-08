@@ -1,0 +1,306 @@
+/*-------------*/
+/*Custom Properties*/
+/*-------------*/
+ :root{
+ 	--clr-black: 35 4 157;
+	--clr-dpurple:166 62 197;
+	--clr-yellow:  255 223 107;
+	--clr-pink: 241 144 183;
+ }
+
+/*-------------*/
+/*RESETS*/
+/*-------------*/
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+body{ background-color:#FFD59E; }
+h1{
+	font-size:50px;
+	color: #333C83;
+}
+input{
+	width:45%;
+	border: 10px solid white;
+	padding-left: 10px;
+	margin-left: 20%;
+	border-radius: 25px;
+}
+#below{
+	margin-left: 28%;
+	margin-top:2% ;
+}
+.selection{
+	border:10px solid white ;
+	border-radius: 25px;
+}
+.enter{
+	margin-left: 5%;
+	border: 10px solid white;
+	background-color: white;
+	border-radius: 25px;
+}
+.ent{
+	margin-left: 2%;
+	color: white;
+	font-size: 20px;
+	border: 10px solid #8843F2;
+	border-radius: 20px;
+	background-color:#8843F2;
+}
+.info{
+	margin: auto;
+	color: #064635;
+	text-align: center;
+	display: grid;
+	gap: 1rem;
+	padding-inline: 2rem;
+	max-width: 60rem;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.toggle{
+	float: right;
+	border-radius: 25px;
+	background-color: white;
+	border:5px solid white ;
+}
+.site{
+	border:10px solid white ;
+	border-radius: 25px;
+}
+.addInfo{
+	display: grid;
+	gap: 2rem;
+}
+
+/*-------------------------------*/
+/*	Dark Theme*/
+/*-------------------------------*/
+.dark-body{
+	background-color:#162447;
+	color: #E43F5A;
+}
+.dark-srch{
+	background-color:#E43F5A;
+	border: 10px solid #E43F5A;
+}
+.dark-info{color: #E43F5A ;}
+.dark-button{
+	background-color: #4D4C7D;
+	border-color: #4D4C7D;
+	color: white;
+}
+.dark-link{color: #FF67E7;}
+/*-------------------------------*/
+ul{
+	list-style-type: none;
+	font-size:28px;
+	line-height:2 ;
+	margin-left: 12%;
+}
+a{
+	color:#363062;
+	text-decoration:none;
+}
+a:hover{
+	color: purple;
+}
+#check{
+	margin-left: 5px;
+	background-color: white;
+	border:2px solid white;
+	border-radius: 2rem;
+}
+@media only screen and (max-width:600px) {
+	h1{
+		margin-left: 8%;
+		/*word-wrap: normal;*/
+	}
+	input{
+		margin-left: 6%;
+		width:72% ;
+	}
+	#below{
+		margin-left: 16%;
+	}
+	.ent{
+		width:13%;
+		border-width: 6px;
+		font-size: 15px;
+	}
+	ul{
+		margin:10%;
+	}
+}
+@media only screen and (min-width: 600px) {
+	h1{
+		margin-left: 9%;
+		/*word-wrap: normal;*/
+	}
+	input{
+		margin-left: 8%;
+		width:70% ;
+	}
+	#below{
+		margin-left: 20%;
+	}
+	.ent{
+		width:12%;
+		border-width: 8px;
+		font-size: 15px;
+	}
+	ul{
+		margin:10%;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	h1{
+		margin-left: 10%;
+		text-align:center;
+	}
+	input{
+		margin-left: 12%;
+		width:65% ;
+	}
+	#below{
+		margin-left: 25%;
+	}
+	.ent{
+		width:14%;
+		border-width: 10px;
+		font-size: 20px;
+	}
+}
+@media only screen and (min-width: 992px) {
+	h1{
+		margin-left: 10%;
+		/*word-wrap: normal;*/
+	}
+	input{
+		margin-left: 20%;
+		width:55% ;
+	}
+	#below{
+		margin-left: 32%;
+	}
+	.ent{
+		width:12%;
+		border-width: 10px;
+		font-size: 20px;
+	}
+}
+@media only screen and (min-width: 1200px) {
+	h1{
+		margin-left: 10%;
+		/*word-wrap: normal;*/
+	}
+	input{
+		margin-left: 25%;
+		width:50% ;
+	}
+	#below{
+		margin-left: 38%;
+	}
+	.ent{
+		width:10%;
+		border-width: 10px;
+		font-size: 20px;
+	}
+}
+@media only screen and (min-width: 1280px) {
+	h1{
+		margin-left: 10%;
+		/*word-wrap: normal;*/
+	}
+	input{
+		margin-left: 25%;
+		width:50% ;
+	}
+	#below{
+		margin-left: 38%;
+	}
+	.ent{
+		width:10%;
+		border-width: 10px;
+		font-size: 20px;
+	}
+}
