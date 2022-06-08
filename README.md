@@ -1,4 +1,6 @@
 ﻿# Anime-Manga-KDrama-Searching-App
+ ![image](https://user-images.githubusercontent.com/92802892/172531406-abcc2608-d6c5-4bce-8fdb-64b6e30cd371.png)
+
 This is an App Created USing.
 **# Node.js,** <br>
 **Apis** Available and .<br>
@@ -51,4 +53,7 @@ So in order to Simplify that this WebApp was created, where everything is **avai
 4. There is another Tab namely **Get Anime Quote**.
     When you press that different Random Quotes from Anime show up on the page.
 5. There is also a **Dark Mode** Available for the page.
+  ![image](https://user-images.githubusercontent.com/92802892/172531494-9c6be798-58de-4655-a7b6-909ea049fd0f.png)
+
+<br>
 6. ENJOY!.
