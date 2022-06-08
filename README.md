@@ -1,9 +1,8 @@
 ﻿# Anime-Manga-KDrama-Searching-App
 This is an App Created USing.
-**# Node.js,** .
-**Apis** .
-Available and .
-**# MongoDB** . 
+**# Node.js,** <br>
+**Apis** Available and .<br>
+**# MongoDB** . <br>
 ## Description.
 This app can get different informations based on the category selected about ANime or Manga or Any Kdramas .User can also add information if not available and even can browse through the wikipedia via direct links from Search Results. This app can also display different quotes stated by diffrent Anime Characters.
 
@@ -12,16 +11,15 @@ After watching a good Show Manga,Anime every one of us go research for more of s
 So in order to Simplify that this WebApp was created, where everything is **available in oneplace** . User donot have to go look through different websites.
 ##How To Use The Project ?
 1. click the following link [http://anime-manga-kdrama-searching.herokuapp.com/](http://anime-manga-kdrama-searching.herokuapp.com/)
-2. Select the option from the follwing.
-  (![Selection](https://user-images.githubusercontent.com/92802892/172529451-e3768840-8770-4f2b-b6f8-09afb710ea46.png)
-  )
+2. Select the option from the follwing.<br>
+  ![Selection](https://user-images.githubusercontent.com/92802892/172529451-e3768840-8770-4f2b-b6f8-09afb710ea46.png)
 <br>
 3.Select Either 
-  i.   Anime.
-  ii.  Manga.
-  iii. Kdrama.
-  iv.  Character.
-  v.   Search with Keywords.
+  i.   Anime.<br>
+  ii.  Manga.<br>
+  iii. Kdrama.<br>
+  iv.  Character.<br>
+  v.   Search with Keywords.<br>
   
  ## Selected ANIME
  1. Write the name of Anime you want to get info about
