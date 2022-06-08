@@ -1,6 +1,9 @@
 ﻿# Anime-Manga-KDrama-Searching-App
  ![image](https://user-images.githubusercontent.com/92802892/172531406-abcc2608-d6c5-4bce-8fdb-64b6e30cd371.png)
 
+JavaScript File anad Css file are in **static** folder<br>
+and EJS file is in **views **Folder<br>
+<br>
 This is an App Created USing.
 **# Node.js,** <br>
 **Apis** Available and .<br>
@@ -48,7 +51,7 @@ So in order to Simplify that this WebApp was created, where everything is **avai
 ##Selected Search By Keyword
  1. A new Selection tab will appear with IMdb and Wikipedia options
  2. Whatever you will select the information will be searched on that platformadn links to hat will appear if information is available
- 3. YOu can then sleect the link and get to the page with the desired information.
+ 3. YOu can then sleect the link and get to the page with the desired information.<br>
   .<br>
 4. There is another Tab namely **Get Anime Quote**.
     When you press that different Random Quotes from Anime show up on the page.
