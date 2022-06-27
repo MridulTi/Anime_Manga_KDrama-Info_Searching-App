@@ -1,5 +1,4 @@
 "use strict"
-//const {MongoClient}=require('mongodb');
 let enter=document.getElementById('enter');
 let ent=document.getElementById('ent');
 enter.addEventListener("click" , getF);
@@ -16,10 +15,9 @@ dark.addEventListener('click',function(){
     document.querySelector('.toggle').classList.toggle('dark-button');
     document.querySelector('.enter').classList.toggle('dark-button');
     document.querySelector('.site').classList.toggle('dark-button');
-    //document.querySelector('a href').classList.toggle('dark-link');
-
-    //document.getElementById('info').classList.toggle('dark-body');
+ 
 })
+//Event Listener For Enter Keydown
 document.addEventListener('keydown',function(event){
     if(event.keyCode==13){
             if(sel.value==1){
@@ -39,6 +37,7 @@ document.addEventListener('keydown',function(event){
 
     }
 });
+//Event Listener for when clicked
 ent.addEventListener("click" ,function(){
     if(sel.value==1){
         getAnime();
@@ -59,6 +58,7 @@ ent.addEventListener("click" ,function(){
     }
 
 });
+//function for Gettng basic info
 function getF(){
     document.querySelector('ul').innerHTML="";
     let url='https://animechan.vercel.app/api/random';
@@ -69,10 +69,10 @@ function getF(){
             document.querySelector('h3').textContent=data.quote;
             document.querySelector('h4').textContent='~By '+data.character;
             document.querySelector('img').src="";
-            //console.log(data);
         })
         .catch(err=>{`error ${err}`});
 }
+//function that Gets Anime information
 function getAnime(){
     document.querySelector('ul').innerHTML="";
     let search=document.querySelector('input').value;
@@ -89,6 +89,7 @@ function getAnime(){
         })
         .catch(err=>{`error ${err}`});
 }
+//function that Gets KDrama information
 function getKdrama(){
     document.querySelector('ul').innerHTML="";
     let search=document.querySelector('input').value;
@@ -106,6 +107,7 @@ function getKdrama(){
         })
         .catch(err=>{`error ${err}`});
 }
+//function that Gets Manga information
 function GetManga(){
     document.querySelector('ul').innerHTML="";
     let search=document.querySelector('input').value;
@@ -113,7 +115,6 @@ function GetManga(){
     fetch(url)
         .then(res => res.json())
         .then(data =>{
-            //console.log(data.results);
             document.querySelector('img').src=data.results[0].image_url;
             document.querySelector('h2').textContent=data.results[0].title;
             document.querySelector('h3').textContent=data.results[0].synopsis;
@@ -122,6 +123,7 @@ function GetManga(){
         })
         .catch(err=>{`error ${err}`});
 }
+//function that Gets Anime Character information
 function GetCharacter(){
     document.querySelector('ul').innerHTML="";
     let search=document.querySelector('input').value;
@@ -129,16 +131,15 @@ function GetCharacter(){
     fetch(url)
         .then(res => res.json())
         .then(data =>{
-            //console.log(data.results);
             document.querySelector('img').src=data.results[0].image_url;
             document.querySelector('h2').textContent=data.results[0].name;
-            // document.querySelector('h2').textContent=data.results[0].alternative_name;
             document.querySelector('h3').textContent="";
             document.querySelector('h4').textContent=data.results[0].manga[0].name;
             document.getElementById('type').textContent='Type: '+data.results[0].anime[0].type;
         })
         .catch(err=>{`error ${err}`});
 }
+//function that Gets information from search IMDB and Wikipedia Engine
 function getGoogle(){
     document.querySelector('img').src='';
     document.querySelector('h2').textContent='';
@@ -180,27 +181,16 @@ function getwiki(){
     fetch(url)
         .then(response=>response.json())
         .then(data=>{
-            // console.log(document.querySelectorAll("li").length);
-            //console.log(document.querySelector('ul'));
+
             if(document.querySelectorAll("li").length>=1){
                 //console.log('hello');
                 let lis=document.querySelectorAll('li');
                 let ul= document.querySelector('ul');
-                // console.log(lis.length);
                 let i=0;
-                // while(lis.length>0){
-                    // console.log(ul);
-                    // ul.removeChild(lis[i]);
-                    // i++;
-                // }
                 document.querySelector('ul').innerHTML="";
-                //console.log(ul==undefined);
             }
-            //console.log(data);
             let i=0;
-            // console.log(data);
             data[1].forEach(object=>{
-                // console.log(object);
                 let li=document.createElement('li');
                 let ul=document.querySelector('ul');
                 let a =document.createElement('a');
@@ -209,7 +199,6 @@ function getwiki(){
                 a.class="content";
                 a.rel='noopener noreferrer';
                 a.textContent+=object;
-                //console.log(li);
                 li.appendChild(a);
                 ul.appendChild(li);
                 i++;
@@ -225,31 +214,20 @@ function getImdb(){
     fetch(url)
         .then(res => res.json())
         .then(data =>{
-            //console.log(data);
             if(document.querySelectorAll("li").length>=1){
-                //console.log('hello');
                 let lis=document.querySelectorAll('li');
                 let ul= document.querySelector('ul');
-                // console.log(lis.length);
                 let i=0;
-                // while(lis.length>0){
-                    // console.log(ul);
-                    // ul.removeChild(lis[i]);
-                    // i++;
-                // }
                 document.querySelector('ul').innerHTML="";
-                //console.log(ul==undefined);
             }
-            //console.log('hello');
             let i=0;
-            // console.log(data);
             data.results.forEach(object=>{
                 let id=object.id;
                 let urrl=`https://imdb-api.com/en/API/Trailer/k_w1v4f9bx/${id}`;
                 fetch(urrl)
                     .then(res=>res.json())
                     .then(data=>{
-                        //console.log(data)
+
                         if(data.link){
                             console.log(data);
                             let li=document.createElement('li');
@@ -261,7 +239,6 @@ function getImdb(){
 
                             a.rel='noopener noreferrer';
                             a.textContent+=data.fullTitle;
-                            // console.log(li);
                             li.appendChild(a);
                             ul.appendChild(li);
                         }
@@ -271,6 +248,7 @@ function getImdb(){
         })
             .catch(err=>{`error ${err}`});
 }
+//Function that postor get API info from the cloud
 function File(){
     document.getElementById('main').textContent="";
     document.querySelector('img').src='';
@@ -312,80 +290,3 @@ function postFile(){
             <button class="enter">Submit</button>
         </form>`
 }
-/*function getTweets(){
-    let tweet=document.getElementById('tweet');
-    tweet.innerHTML=`<select id=sele>
-                        <option value=1>Funimation</option>
-                        <option value=2>CrunchyRoll</option>
-                        <option value=3>Hulu</option>
-                    </select>
-                    <button id="check">Check</button>`
-    let check=document.getElementById('check');
-    check.addEventListener('click',function(){
-        let sele=document.getElementById('sele');
-        if(sele.value==1){
-            getFunimation();
-        }else if(sele.value==2){
-            getCrunchyroll();
-        }else if(sele.value==3){
-            getHulu();
-        }
-    });
-    
-    
-}
-function getFunimation(){
-    console.log('Funimation');
-    const url='https://api.twitter.com/2/users/17444764/tweets';
-    //const url='https://api.twitter.com/2/users/:177444764/tweets?tweet.fields=created_at&expansions=author_id&user.fields=created_at&max_results=5';
-    fetch(url,{
-        methid:'GET',
-        headers:{'Authorization':'Bearer AAAAAAAAAAAAAAAAAAAAAMY3bwEAAAAAaFbZcdaM088ZROLI%2B%2BtauIY8wuM%3D6jcqFTa0tTAGP2ndRFgLpIzMpPAcVII5zsMa7CMm5Xa3OEcnM0'}
-    })
-
-        .then(res =>res.json())
-        .then(data =>{
-            console.log(data);
-             //document.querySelector('img').src=data.results[0].image_url;
-            // document.querySelector('h2').textContent=data.character.srch.Description;
-            // document.querySelector('h2').textContent='Backstory'+data.character.srch.BAckstory;
-            // document.querySelector('h3').textContent='Birthday'+data.character,srch.Birthday;
-            // document.querySelector('h4').textContent='Anime/Manga'+data.character.srch.Anime/Manga;
-            // document.getElementById('type').textContent='Alternative_Name: '+Alternative_Name;
-        })
-        .catch(err=>{`error ${err}`})
-}
-function getCrunchyroll(){
-    console.log('CrunchyRoll');
-    const url='https://api.twitter.com/2/users/28023330/tweets" -H "Authorization: Bearer AAAAAAAAAAAAAAAAAAAAAMY3bwEAAAAAaFbZcdaM088ZROLI%2B%2BtauIY8wuM%3D6jcqFTa0tTAGP2ndRFgLpIzMpPAcVII5zsMa7CMm5Xa3OEcnM0';
-    fetch(url)
-        .then(res =>res.json())
-        .then(data =>{
-            console.log(data);
-             //document.querySelector('img').src=data.results[0].image_url;
-            // document.querySelector('h2').textContent=data.character.srch.Description;
-            // document.querySelector('h2').textContent='Backstory'+data.character.srch.BAckstory;
-            // document.querySelector('h3').textContent='Birthday'+data.character,srch.Birthday;
-            // document.querySelector('h4').textContent='Anime/Manga'+data.character.srch.Anime/Manga;
-            // document.getElementById('type').textContent='Alternative_Name: '+Alternative_Name;
-        })
-        .catch(err=>{`error ${err}`})
-
-}
-function getHulu(){
-    console.log('Hulu');
-    const url='https://api.twitter.com/2/users/15033883/tweets" -H "Authorization: Bearer AAAAAAAAAAAAAAAAAAAAAMY3bwEAAAAAaFbZcdaM088ZROLI%2B%2BtauIY8wuM%3D6jcqFTa0tTAGP2ndRFgLpIzMpPAcVII5zsMa7CMm5Xa3OEcnM0';
-    fetch(url)
-        .then(res =>res.json())
-        .then(data =>{
-            console.log(data);
-             //document.querySelector('img').src=data.results[0].image_url;
-            // document.querySelector('h2').textContent=data.character.srch.Description;
-            // document.querySelector('h2').textContent='Backstory'+data.character.srch.BAckstory;
-            // document.querySelector('h3').textContent='Birthday'+data.character,srch.Birthday;
-            // document.querySelector('h4').textContent='Anime/Manga'+data.character.srch.Anime/Manga;
-            // document.getElementById('type').textContent='Alternative_Name: '+Alternative_Name;
-        })
-        .catch(err=>{`error ${err}`})
-
-}*/
