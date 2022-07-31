@@ -9,10 +9,10 @@ This is an App Created USing.
 **Apis** Available and .<br>
 **# MongoDB** . <br>
 ## Description.
-This app can get different informations based on the category selected about ANime or Manga or Any Kdramas .User can also add information if not available and even can browse through the wikipedia via direct links from Search Results. This app can also display different quotes stated by diffrent Anime Characters.
+This app can get different informations based on the category selected about Anime or Manga or Any Kdramas .User can also add information if not available and even can browse through the wikipedia via direct links from Search Results. This app can also display different quotes stated by diffrent Anime Characters.
 
 ## MOTIVATION:
-After watching a good Show Manga,Anime every one of us go research for more of such shows and when we do find one, instead of jumpoign straight into the show we look at the **Synopsis** , **Reviews** ,etc. But its a wholoe Research PANEL we have o go through.
+After watching a good Show Manga,Anime every one of us go research for more of such shows and when we do find one, instead of jumpoign straight into the show we look at the **Synopsis** , **Reviews** ,etc. But its a whole Research PANEL we have to go through.
 So in order to Simplify that this WebApp was created, where everything is **available in oneplace** . User donot have to go look through different websites.
 ##How To Use The Project ?
 1. click the following link [http://anime-manga-kdrama-searching.herokuapp.com/](http://anime-manga-kdrama-searching.herokuapp.com/)
