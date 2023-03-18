@@ -15,7 +15,7 @@ This app can get different informations based on the category selected about Ani
 After watching a good Show Manga,Anime every one of us go research for more of such shows and when we do find one, instead of jumpoign straight into the show we look at the **Synopsis** , **Reviews** ,etc. But its a whole Research PANEL we have to go through.
 So in order to Simplify that this WebApp was created, where everything is **available in oneplace** . User donot have to go look through different websites.
 ##How To Use The Project ?
-1. click the following link [http://anime-manga-kdrama-searching.herokuapp.com/](http://anime-manga-kdrama-searching.herokuapp.com/)
+1. click the following link [[http://anime-manga-kdrama-searching.herokuapp.com/](https://anime-manga-kdrama-searching.netlify.app/)]([http://anime-manga-kdrama-searching.herokuapp.com/](https://anime-manga-kdrama-searching.netlify.app/))
 2. Select the option from the follwing.<br>
   ![Selection](https://user-images.githubusercontent.com/92802892/172529451-e3768840-8770-4f2b-b6f8-09afb710ea46.png)
 <br>
